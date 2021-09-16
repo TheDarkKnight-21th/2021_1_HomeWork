@@ -1,0 +1,19 @@
+scores <-rnorm((100000000),mean = 80,sd= 15)
+hist(scores)
+my_sum <- function(scores) {
+  return (sum(scores)) 
+}
+
+my_avg <- function(scores){
+  return (my_sum(scores)/length(scores))
+}
+
+my_sd <- function(scores){
+  return (sqrt(sum((scores-my_avg(scores))**2)/length(scores)))
+}
+
+
+my_sum(scores)
+class(my_sum(scores))
+my_avg(scores)
+my_sd(scores)
